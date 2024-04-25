@@ -1,0 +1,90 @@
+@import '_variables';
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid $footerBorderTopColor;
+  padding: 32px 16px 20px;
+  @media (min-width: 375px) {
+    & {
+      padding: 32px 24px 20px;
+    }
+  }
+  @media (min-width: 768px) {
+    & {
+      padding: 32px 32px 20px;
+    }
+  }
+  @media (max-width: 768px) {
+    & {
+      flex-direction: column;
+    }
+  }
+}
+.footer__copyright {
+  width: 33%;
+  @media (max-width: 768px) {
+    & {
+      width: 100%;
+      margin-bottom: 16px;
+    }
+  }
+}
+.footer__copyright-text {
+  font-size: 14px;
+  line-height: 115%;
+  color: #7e7e82b8;
+  margin: 0;
+  padding: 0;
+  @media (max-width: 768px) {
+    & {
+      text-align: center;
+    }
+  }
+}
+.footer__privacy-policy {
+  width: 33%;
+  @media (max-width: 768px) {
+    & {
+      width: 100%;
+      margin-bottom: 16px;
+    }
+  }
+}
+.footer__btn-link {
+  font-size: 14px;
+  line-height: 115%;
+  text-align: center;
+  color: $servicePriceTitleColor;
+  mix-blend-mode: normal;
+  text-decoration: none;
+  display: block;
+  @media (max-width: 768px) {
+    & {
+      text-align: center;
+    }
+  }
+}
+.footer__oferta {
+  width: 33%;
+  @media (max-width: 768px) {
+    & {
+      width: 100%;
+    }
+  }
+}
+.footer__oferta-text {
+  font-size: 14px;
+  line-height: 115%;
+  text-align: right;
+  color: $servicePriceTitleColor;
+  mix-blend-mode: normal;
+  margin: 0;
+  padding: 0;
+  @media (max-width: 768px) {
+    & {
+      text-align: center;
+    }
+  }
+}

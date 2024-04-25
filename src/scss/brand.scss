@@ -1,0 +1,241 @@
+@import '_variables';
+
+.brand-slider__title {
+  padding: 16px 16px;
+
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  text-transform: uppercase;
+  color: #7E7E82;
+  font-weight: 500;
+  margin-bottom: 24px;
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(270deg, $bgColor 0%, $headerbg 98.61%);
+    z-index: -1;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+
+@media (min-width: 376px) {
+  .brand-slider__title {
+    padding: 16px 16px;
+  }
+}
+
+@media (min-width: 540px) {
+  .brand-slider__title {
+    padding: 16px 24px;
+  }
+}
+
+@media (min-width: 769px) {
+  .brand-slider__title {
+    padding: 16px 32px;
+  }
+}
+
+.brand-slider__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 8px;
+  row-gap: 16px;
+  column-gap: 32px;
+}
+
+@media (min-width: 425px) {
+  .brand-slider__wrapper {
+    transform: translate3d(0, 0px, 0px) !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .brand-slider__wrapper {
+    margin: 0 24px;
+  }
+}
+.brand-slider__item {
+  background: $headerbg;
+  border: 1px solid $headerSeparatorBg;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  width: calc(100% - 0px);
+  min-width: 240px;
+  box-sizing: border-box;
+}
+.brand-slider__item:nth-child(n+2) {
+  display: none;
+}
+@media (min-width: 376px) {
+  .brand-slider__item {
+    width: calc(50% - 24px);
+  }
+  .brand-slider__item:nth-child(n+2) {
+    display: flex;
+  }
+  .brand-slider__item:nth-child(n+3) {
+    display: flex;
+  }
+  .brand-slider__item:nth-child(n+4) {
+    display: flex;
+  }
+  .brand-slider__item:nth-child(n+5) {
+    display: none;
+  }
+}
+@media (min-width: 540px) {
+  .brand-slider__item {
+    width: calc(33% - 24px)!important;
+  }
+  .brand-slider__item:nth-child(n+5) {
+    display: flex;
+  }
+  .brand-slider__item:nth-child(n+6) {
+    display: flex;
+  }
+  .brand-slider__item:nth-child(n+7) {
+    display: none;
+  }
+}
+@media (min-width: 769px) {
+  .brand-slider__item {
+    width: calc(25% - 24px)!important;
+  }
+  .brand-slider__item:nth-child(n+7) {
+    display: flex;
+  }
+  .brand-slider__item:nth-child(n+8) {
+    display: flex;
+  }
+  .brand-slider__item:nth-child(n+9) {
+    display: none;
+  }
+}
+.brand-slider__item-logo {
+  display: flex;
+  align-items: center;
+  max-width: calc(100% - 60px);
+}
+
+.brand-slider__item-picture {
+  max-width: 100%;
+  height: auto;
+}
+
+.brand-slider__item-btn {
+  border: 2px solid $btnColor;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-image: url("data:image/svg+xml,%3Csvg width='8' height='12' viewBox='0 0 8 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4.5 6L0.707106 2.20711C0.316582 1.81658 0.316582 1.18342 0.707107 0.792893L0.792893 0.707107C1.18342 0.316583 1.81658 0.316583 2.20711 0.707107L6.79289 5.29289C7.18342 5.68342 7.18342 6.31658 6.79289 6.70711L2.20711 11.2929C1.81658 11.6834 1.18342 11.6834 0.792893 11.2929L0.707107 11.2071C0.316583 10.8166 0.316583 10.1834 0.707107 9.79289L4.5 6Z' fill='%23FF3E79'/%3E%3C/svg%3E%0A");
+  background-size: 8px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.brand-slider__more {
+  margin: 16px 32px 16px;
+  position: relative;
+  padding-left: 32px;
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.2px;
+  color: $textColor;
+  cursor: pointer;
+  transition: all .8s ease;
+  font-weight: 500;
+  font-family: 'TT Lakes', sans-serif;
+}
+
+.brand-slider__more:before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 0;
+  left: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M14.5001 7.50008L12.0001 10.0001L9.50008 7.50008C9.22393 7.22393 8.77622 7.22393 8.50008 7.50008C8.22393 7.77622 8.22393 8.22393 8.50008 8.50008L11.293 11.293C11.6835 11.6835 12.3167 11.6835 12.7072 11.293L15.5001 8.50008C15.7762 8.22393 15.7762 7.77622 15.5001 7.50008C15.2239 7.22393 14.7762 7.22393 14.5001 7.50008ZM14.5001 13.5001L12.0001 16.0001L9.50008 13.5001C9.22393 13.2239 8.77622 13.2239 8.50008 13.5001C8.22393 13.7762 8.22393 14.2239 8.50008 14.5001L11.293 17.293C11.6835 17.6835 12.3167 17.6835 12.7072 17.293L15.5001 14.5001C15.7762 14.2239 15.7762 13.7762 15.5001 13.5001C15.2239 13.2239 14.7762 13.2239 14.5001 13.5001Z' fill='%2341F6D7'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.brand-slider__more--hide:before {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.brand-slider__list--open .brand-slider__item {
+  display: flex !important;
+}
+
+.swiper-initialized {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+  padding-bottom: 32px;
+}
+
+.swiper-initialized .brand-slider__wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  transition-property: transform;
+  box-sizing: content-box;
+  flex-wrap: nowrap;
+  margin: 0 16px 0 16px;
+}
+
+.swiper-initialized .swiper-pagination {
+  margin: 0 16px 0 16px;
+  white-space: nowrap;
+}
+
+.swiper-initialized .brand-slider__item {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition-property: transform;
+  margin: 0;
+  max-width: calc(100% - 32px);
+}
+
+.swiper-initialized .brand-slider__item:nth-child(n) {
+  display: flex;
+}
+
+.swiper-initialized .brand-slider__item-picture {
+  height: auto;
+  max-height: 30px;
+  width: auto;
+}
+
+.swiper-initialized .brand-slider__more {
+  display: none;
+}
