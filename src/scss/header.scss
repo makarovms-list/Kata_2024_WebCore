@@ -6,6 +6,7 @@
 
 .header__header-pos {
   padding: 18px 16px;
+  border-bottom: 1px solid $footerBorderTopColor;
 }
 
 @media (min-width: 768px) {
@@ -266,6 +267,7 @@
 /* Content menu */
 .content-menu__inline-menu {
   margin-bottom: 24px;
+  overflow: hidden;
 }
 
 .content-menu__menu-wrapper {
@@ -275,7 +277,10 @@
   display: flex;
   gap: 16px;
   white-space: nowrap;
-  overflow-x: hidden;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 20px;
+  margin-bottom: -20px;
 }
 
 .content-menu__list-item {
@@ -298,7 +303,7 @@
 
 @media (min-width: 768px) {
   .content-menu__menu-wrapper {
-    margin: 0 24px;
+    margin: 0 24px -20px;
   }
 }
 
