@@ -432,6 +432,9 @@
   background-size: 20px;
   background-position: center center;
   background-repeat: no-repeat; }
+  @media (min-width: 1024px) {
+    .sidebar-top__btn-icon--close {
+      display: none; } }
 
 .sidebar-top__logo-image {
   height: 50px;
@@ -578,7 +581,8 @@
   background: #FFFFFF; }
 
 .header__header-pos {
-  padding: 18px 16px; }
+  padding: 18px 16px;
+  border-bottom: 1px solid #D9FFF5; }
 
 @media (min-width: 768px) {
   .header__header-pos {
@@ -793,7 +797,8 @@
 
 /* Content menu */
 .content-menu__inline-menu {
-  margin-bottom: 24px; }
+  margin-bottom: 24px;
+  overflow: hidden; }
 
 .content-menu__menu-wrapper {
   list-style: none;
@@ -802,7 +807,10 @@
   display: flex;
   gap: 16px;
   white-space: nowrap;
-  overflow-x: hidden; }
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 20px;
+  margin-bottom: -20px; }
 
 .content-menu__list-item {
   padding: 8px 16px; }
@@ -821,7 +829,7 @@
 
 @media (min-width: 768px) {
   .content-menu__menu-wrapper {
-    margin: 0 24px; } }
+    margin: 0 24px -20px; } }
 
 @media (min-width: 1024px) {
   .content-menu__menu-wrapper {
@@ -910,6 +918,7 @@
 
 .brand-slider__title {
   padding: 16px 16px;
+  border-top: 1px solid #D9FFF5;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.2px;
@@ -947,9 +956,19 @@
   margin: 0 8px;
   row-gap: 16px;
   -moz-column-gap: 32px;
-       column-gap: 32px; }
+       column-gap: 32px;
+  max-height: 190px;
+  overflow: hidden; }
 
-@media (min-width: 425px) {
+.brand-slider__list--open .brand-slider__wrapper {
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content; }
+
+.swiper-initialized .brand-slider__wrapper {
+  overflow: visible; }
+
+@media (min-width: 580px) {
   .brand-slider__wrapper {
     transform: translate3d(0, 0px, 0px) !important; } }
 
@@ -1103,6 +1122,7 @@
 
 .types-equipment .types-equipment__title {
   padding: 16px 16px;
+  border-top: 1px solid #D9FFF5;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.2px;
@@ -1261,6 +1281,7 @@
 
 .services-price .services-price__title {
   padding: 16px 16px;
+  border-top: 1px solid #D9FFF5;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.2px;
