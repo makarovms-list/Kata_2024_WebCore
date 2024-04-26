@@ -238,8 +238,8 @@ window.addEventListener('DOMContentLoaded', function(event) {
     if (typeof(brandSlider) != 'undefined' && brandSlider != null) {
       let swiperBrandSlider = new Swiper('.brand-slider', {
         speed: 600,
-        centeredSlides: true,
-        spaceBetween: 16,
+        centeredSlides: false,
+        spaceBetween: 0,
         touchRatio: 1,
         loop: true,
         wrapperClass: 'brand-slider__wrapper',
@@ -251,31 +251,31 @@ window.addEventListener('DOMContentLoaded', function(event) {
         breakpoints: {
           1500: {
             slidesPerView: 8,
-            spaceBetween: 32,
+            spaceBetween: 0,
           },
           1200: {
             slidesPerView: 6,
-            spaceBetween: 32,
+            spaceBetween: 0,
           },
           992: {
             slidesPerView: 4,
-            spaceBetween: 32,
+            spaceBetween: 0,
           },
           768: {
             slidesPerView: 3,
-            spaceBetween: 32,
+            spaceBetween: 0,
           },
           576: {
             slidesPerView: 3,
-            spaceBetween: 24,
+            spaceBetween: 0,
           },
           400: {
             slidesPerView: 2,
-            spaceBetween: 16,
+            spaceBetween: 0,
           },
           320: {
             slidesPerView: 1,
-            spaceBetween: 16,
+            spaceBetween: 0,
           },
         },
         pagination: {
@@ -289,7 +289,7 @@ window.addEventListener('DOMContentLoaded', function(event) {
     if (typeof(equipmentSlider) != 'undefined' && equipmentSlider != null) {
       let swiperEquipmentSlider = new Swiper('.types-equipment', {
         speed: 600,
-        centeredSlides: true,
+        centeredSlides: false,
         spaceBetween: 16,
         touchRatio: 1,
         loop: true,
@@ -340,7 +340,7 @@ window.addEventListener('DOMContentLoaded', function(event) {
     if (typeof(priceSlider) != 'undefined' && priceSlider != null) {
       let swiperPriceSlider = new Swiper('.services-price__view--mobile', {
         speed: 600,
-        centeredSlides: true,
+        centeredSlides: false,
         spaceBetween: 16,
         touchRatio: 1,
         loop: true,
